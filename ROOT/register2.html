@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<title>懒喵[注册-支出信息]</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="keywords" content="懒喵,记账,理财">
+<meta http-equiv="description" content="懒喵理财登录页">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/messenger.css" rel="stylesheet">
+<link href="css/messenger-theme-flat.css" rel="stylesheet">
+<link href="css/common_bg.css" rel="stylesheet">
+<link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body>
+	<div class="container">
+		<form class="form-horizontal" role="form" action="Register" method="post">
+		
+		    <h2 class="masthead-brand" align="center"><a href="http://lanmiao.me">Lanmiao.me</a></h2>
+			<h3 class="form-signin-heading" align="center">
+				<strong id="msg_area">支出相关信息填写</strong>
+			</h3>
+			<br>
+			          
+			<div class="panel panel-primary col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10  col-lg-offset-2 col-lg-8">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						每月<abbr title="包括[房租、网费、有线电视费]等你认为每月固定的支出，统计时不能调整">固定支出</abbr> 及<abbr
+							title="包括[水费、电费、煤气费、话费、公交车费]等每月你认为的大概支出，统计时可以调整">半固定支出</abbr>
+							
+					</h3>
+				</div>
+				<div class="panel-body" id="panel-body2">
+
+					<div class="form-group">
+						<label for="rent" class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-2 control-label">房租</label>
+						<div class="col-xs-11 col-sm-4">
+						  <div class="input-group">
+							<input id="rent" name="rent" class="form-control"
+								placeholder="房租">
+						    <span class="input-group-addon">元</span>
+						  </div>
+						</div>
+						<div class="col-sm-5 col-md-4">
+							<div class="radio radio-inline">
+								<label>
+								  <input type="radio" name="radio_rent" checked="checked" value="0">固定支出
+								</label>
+						    </div>	
+						    <div class="radio radio-inline">	
+								<label>
+								  <input type="radio" name="radio_rent"  value="1">半固定支出
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="loan" class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-2 control-label">房贷</label>
+						<div class="col-xs-11 col-sm-4">
+						  <div class="input-group">
+							<input id="loan" name="loan" class="form-control"
+								placeholder="房贷">
+						    <span class="input-group-addon">元</span>
+						  </div>
+						</div>
+						<div class="col-sm-5 col-md-4">
+						    <div class="checkbox checkbox-inline">	
+								<label>
+								  <input type="checkbox" id="inlineCheckbox1" name="check_solid" value="1" checked="checked">固定支出
+								</label>
+							</div>
+						    <div class="checkbox checkbox-inline">	
+								<label>
+								  <input type="checkbox" id="inlineCheckbox1"  name="check_jin" value="1" checked="checked">公积金还房贷
+								</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="net" class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-2 control-label">网费</label>
+						<div class="col-xs-11 col-sm-4">
+						  <div class="input-group">
+							<input name="net" class="form-control"
+								placeholder="网费">
+							<span class="input-group-addon">元</span>
+						  </div>
+						</div>
+						<div class="col-sm-5 col-md-4">
+							<div class="radio radio-inline">
+								<label>
+								  <input type="radio" name="radio_net" checked="checked" value="0">固定支出
+								</label>
+						    </div>	
+						    <div class="radio radio-inline">	
+								<label>
+								  <input type="radio" name="radio_net"  value="1">半固定支出
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="tv" class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-2 control-label">有线电视费</label>
+						<div class="col-xs-11 col-sm-4">
+						   <div class="input-group">
+							<input id="tv" name="tv" class="form-control"
+								placeholder="有线电视费">
+							<span class="input-group-addon">元</span>
+						   </div>
+						</div>
+						<div class="col-sm-5 col-md-4">
+							<div class="radio radio-inline">
+								<label>
+								  <input type="radio" name="radio_tv" checked="checked" value="0">固定支出
+								</label>
+						    </div>	
+						    <div class="radio radio-inline">	
+								<label>
+								  <input type="radio" name="radio_tv"  value="1">半固定支出
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="water" class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-2 control-label">水费</label>
+						<div class="col-xs-11 col-sm-4">
+						  <div class="input-group">
+							<input id="water" name="water" class="form-control"
+								placeholder="水费">
+							<span class="input-group-addon">元</span>
+						   </div>
+						</div>
+						<div class="col-sm-5 col-md-4">
+							<div class="radio radio-inline">
+								<label>
+								  <input type="radio" name="radio_water" checked="checked" value="0">固定支出
+								</label>
+						    </div>	
+						    <div class="radio radio-inline">	
+								<label>
+								  <input type="radio" name="radio_water"  value="1">半固定支出
+								</label>
+							</div>
+						</div>
+					</div>
+					<br>
+					<div class="form-group">
+						<label for="electric"
+							class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-2 control-label">电费</label>
+						<div class="col-xs-11 col-sm-4">
+						   <div class="input-group">
+							<input id="electric" name="electric" class="form-control"
+								placeholder="电费">
+							<span class="input-group-addon">元</span>
+						   </div>
+						</div>
+						<div class="col-sm-5 col-md-4">
+							<div class="radio radio-inline">
+								<label>
+								  <input type="radio" name="radio_electric" value="0">固定支出
+								</label>
+						    </div>	
+						    <div class="radio radio-inline">	
+								<label>
+								  <input type="radio" name="radio_electric"  value="1" checked="checked">半固定支出
+								</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="gas"
+							class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-2 control-label">煤气/天然气费</label>
+						<div class="col-xs-11 col-sm-4">
+						   <div class="input-group">
+							<input id="gas" name="gas" class="form-control"
+								placeholder="煤气/天然气费">
+							<span class="input-group-addon">元</span>
+						   </div>
+						</div>
+						<div class="col-sm-5 col-md-4">
+							<div class="radio radio-inline">
+								<label>
+								  <input type="radio" name="radio_gas" value="0">固定支出
+								</label>
+						    </div>	
+						    <div class="radio radio-inline">	
+								<label>
+								  <input type="radio" name="radio_gas"  value="1" checked="checked">半固定支出
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="tel" class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-2 control-label">话费</label>
+						<div class="col-xs-11 col-sm-4">
+						   <div class="input-group">
+							<input id="tel" name="tel" class="form-control"
+								placeholder="话费">
+							<span class="input-group-addon">元</span>
+						   </div>
+						</div>
+						<div class="col-sm-5 col-md-4">
+							<div class="radio radio-inline">
+								<label>
+								  <input type="radio" name="radio_tel" value="0">固定支出
+								</label>
+						    </div>	
+						    <div class="radio radio-inline">	
+								<label>
+								  <input type="radio" name="radio_tel"  value="1" checked="checked">半固定支出
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="bus" class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-2 control-label">公交车费</label>
+						<div class="col-xs-11 col-sm-4">
+						   <div class="input-group">
+							<input id="bus" name="bus" class="form-control"
+								placeholder="公交车费">
+							<span class="input-group-addon">元</span>
+						   </div>
+						</div>
+						<div class="col-sm-5 col-md-4">
+							<div class="radio radio-inline">
+								<label>
+								  <input type="radio" name="radio_bus"  value="0">固定支出
+								</label>
+						    </div>	
+						    <div class="radio radio-inline">	
+								<label>
+								  <input type="radio" name="radio_bus"  value="1" checked="checked">半固定支出
+								</label>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group" id="userDef">
+					   
+					    <hr/>
+						<label for="userDef1" class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-2 control-label">自定义支出</label>
+						<div class="col-sm-8">
+
+							<div class="input-group" >
+							  <span class="input-group-addon">描述</span>
+							  <input id="desc" type="text" class="form-control" placeholder="描述">
+							
+							  <span class="input-group-addon">金额</span>
+							  <input id="mount" class="form-control" placeholder="金额">
+							</div>
+			
+							<div class="row">
+								<div class="col-xs-10 col-sm-10 ">
+									<div class="radio radio-inline">
+										<label>
+										  <input id="radio" type="radio" value="0">固定支出
+										</label>
+								    </div>	
+								    <div class="radio radio-inline">	
+										<label>
+										  <input id="radio" type="radio" value="1" checked="checked">半固定支出
+										</label>
+									</div>
+							    </div>
+							 
+							 <div class="col-xs-2 col-sm-2">
+							<button id="userRemove" class="btn btn-sm btn-primary btn-block" type="button">
+								<span class="glyphicon glyphicon-minus"></span>
+							</button>
+							</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group" id="addBeforeHere">
+						<div class="col-xs-offset-0 col-xs-3 col-sm-offset-4 col-sm-1">
+
+							<button id="userAdd" class="btn btn-sm btn-primary btn-block" type="button">
+								<span class="glyphicon glyphicon-plus"></span>
+							</button>
+						</div>
+						<h5>添加自定义固定/半固定支出</h5>
+					</div>
+					
+					 <div class="form-group">
+						<div class="col-xs-offset-0 col-xs-6 col-sm-offset-2 col-sm-4  ">
+							<button id="next" class="btn btn-lg btn-primary btn-block" type="submit">下一步</button>
+						</div>
+						<div class="col-xs-6 col-sm-4">
+							<button class="btn btn-lg btn-primary btn-block" type="reset">取消</button>
+						</div>
+					</div>
+			
+				</div>
+				
+			</div>
+			
+
+			
+                   <div class="alert alert-success alert-dismissable col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-0 col-lg-2">
+	                   <h4><strong>名词解释</strong></h4>
+	                   <h5><strong>固定支出:</strong> 包括[房租、网费、有线电视费]等你认为每月固定的支出，统计时不能调整。</h5>
+	                   <h5><strong>半固定支出:</strong> 包括[水费、电费、煤气费、话费、公交车费]等每月你认为的大概支出，统计时可以调整。</h5>
+	                    <h5><strong>提示:</strong> 无该支出项目可以不填，不用填写零。</h5>
+                   </div>
+			
+		</form>
+	</div>
+
+	<div style="text-align: center;">
+	   <p>懒喵 <a href="http://lanmiao.me">lanmiao.me</a>  沪ICP备14015278号 </p>
+	</div>
+	
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+    <script src="js/messenger.min.js"></script>
+    <script src="js/messenger-theme-flat.js"></script>
+    <script src="js/register2.js"></script>
+</body>
+</html>

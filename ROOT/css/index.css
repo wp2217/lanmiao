@@ -1,0 +1,36 @@
+.banner { position: relative; overflow: auto;}
+    .banner li { list-style: none; }
+        .banner ul li { float: left; }
+
+.imgwp{
+width: 85%;
+hight: auto
+}
+.imgwp1{
+width: 95%;
+hight: auto;
+}
+
+a{
+line-height:26px;
+}
+
+.space{
+margin-left: 15px;
+margin-right: 10px;
+}
+
+.container{
+padding-left:55px;
+padding-right:55px;
+}
+
+.small{
+font-size:10px;
+font-family:STXihei;
+font-style:italic;
+}
+
+#list{
+padding-left:15px;
+}

@@ -1,0 +1,64 @@
+body {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: arial,verdana,sans-serif;font-size:14px;
+}
+
+
+@media (min-width: 200px) {
+.fontSizeAuto{
+	font-size: 10px;
+	padding-bottom:10px;
+}
+
+.number{
+	font-family: Georgia, Times New Roman, Times, serif;
+	color: green;
+	font-weight: bold;
+	font-size: 6px;
+}
+}
+
+@media (min-width: 400px) {
+.fontSizeAuto{
+	font-size: 14px;
+	padding-bottom:10px;
+}
+
+.number{
+	font-family: Georgia, Times New Roman, Times, serif;
+	color: green;
+	font-weight: bold;
+	font-size: 8px;
+}
+}
+
+@media (min-width: 768px) {
+.fontSizeAuto{
+	font-size: 16px;
+	padding-bottom:10px;
+}
+
+.number{
+	font-family: Georgia, Times New Roman, Times, serif;
+	color: green;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+}
+
+@media (min-width: 992px) {
+.fontSizeAuto{
+	color: navy;
+	font-size: 15px;
+	padding-bottom: 15px;
+}
+
+.number{
+	font-family: Georgia, Times New Roman, Times, serif;
+	color: green;
+	font-weight: bold;
+	font-size: 20px;
+}
+}

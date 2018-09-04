@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="GB2312">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="记账,在线记账,记账软件,懒喵,懒喵记账">
+    <meta name="description" content="懒喵记账，简单，方便，精准的在线记账。我们的目标只有一个，让您知道哪些钱该花，哪些钱不该花。">
+
+    <title>懒喵在线记账，做最懂你的记账软件</title>
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/messenger.css" rel="stylesheet">
+    <link href="css/messenger-theme-flat.css" rel="stylesheet">
+    <link href="css/cover.css" rel="stylesheet">
+    <link href="css/common_bg.css" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand"><a href="http://lanmiao.me">Lanmiao.me</a></h3>
+              <ul class="nav masthead-nav">
+                <li class="active"><a href="index.html">主页</a></li>
+                <li><a href="more.html">特点</a></li>
+                <li><a href="login.html">使用</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">懒喵，懂你.</h1>
+            <p class="lead">懒喵记账，简单、易用、精准.</p>
+            <p class="lead">
+              <a href="more.html" class="btn btn-lg btn-primary">了解更多</a>
+
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>懒喵 <a href="http://lanmiao.me">lanmiao.me</a>  沪ICP备14015278号 </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/messenger.min.js"></script>
+    <script src="js/messenger-theme-flat.js"></script>	
+    <script type="text/javascript">
+    
+    $(document).ready(function() {
+    
+	    Messenger.options = {
+			parentLocations : [ 'body' ],
+			extraClasses : 'messenger-fixed  messenger-on-bottom',
+			theme : 'flat'
+		};
+	
+		var msg = Messenger().post("initial msg");
+		msg.hide();
+	   
+    
+    	var Sys = {};
+        var ua = navigator.userAgent.toLowerCase();
+        window.ActiveXObject ? Sys.ie = ua.match(/msie ([\d.]+)/)[1] :
+        document.getBoxObjectFor ? Sys.firefox = ua.match(/firefox\/([\d.]+)/)[1] :
+        window.MessageEvent && !document.getBoxObjectFor ? Sys.chrome = ua.match(/chrome\/([\d.]+)/)[1] :
+        window.opera ? Sys.opera = ua.match(/opera.([\d.]+)/)[1] :
+        window.openDatabase ? Sys.safari = ua.match(/version\/([\d.]+)/)[1] : 0;
+
+        if(Sys.ie){
+        	if(Sys.ie < 9.0){
+             alert_msg(msg, "success", "<h2>你的浏览器是IE" + Sys.ie + "， 浏览器版本过低请使用" +
+                "<a style='text-decoration: underline;' href='http://www.google.cn/intl/zh-CN/chrome/browser/' target='_blank'>Chrome</a>浏览器，或下载最新版IE(" + 
+        		"<a style='text-decoration: underline;' href='http://windows.microsoft.com/zh-cn/internet-explorer/download-ie' target='_blank'>IE11</a>)。</h2>"
+        		);
+        	}
+        };
+        if(Sys.firefox) alert('Firefox: '+Sys.firefox);
+        if(Sys.opera) alert('Opera: '+Sys.opera);
+        if(Sys.safari) alert_msg(msg, "success", "<h2>你的浏览器是Safari，已不被支持，请使用Chrome或IE浏览器</h2>");
+        
+        function alert_msg(i_msg, i_type, i_text) {
+		i_msg.update({
+			message : i_text,
+			type : i_type
+		});
+	};
+        
+        });
+    </script>
+  </body>
+</html>

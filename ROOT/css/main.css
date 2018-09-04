@@ -1,0 +1,120 @@
+
+@media (min-width: 512px){/*ÊÖ»ú ºá ÊúÆÁ*/
+.box{
+	width: 100px;
+	height: 50px;
+	font-size: 14px;
+	text-align: center;
+}
+}
+
+
+@media (min-width: 768px){/*pad mini2 ÊúÆÁ*/
+.box{
+	width: 120px;
+	height: 50px;
+	font-size: 25px;
+	text-align: center;
+}
+.small_font{
+	font-size: 16px;
+}
+}
+
+ @media (min-width: 992px){ /*pad mini2 ºáÆÁ*/
+.box{
+	width: 120px;
+	height: 60px;
+	font-size: 24px;
+	text-align: center;	
+}
+.small_font{
+	font-size: 11px;
+}
+
+}
+
+@media (min-width: 1200px){
+.box{
+	width: 150px;
+	height: 60px;
+	font-size: 32px;
+	text-align: center;
+}
+.small_font{
+	font-size: 14px;
+}}
+
+
+.piaoliang1{
+margin: 0px auto;
+margin-bottom:20px;
+border:1px solid #F8B3D0;
+background-color: #FFF5FA;
+}
+
+.piaoliang2{
+margin: 0px auto;
+margin-bottom:20px;
+border:1px solid #E3E197;
+background-color: #FFFFDD;
+}
+
+.piaoliang3{
+margin: 0px auto;
+margin-bottom:20px;
+border:1px solid #FFDD99;
+background-color: #FFF9ED;
+
+}
+
+.piaoliang4{
+margin: 0px auto;
+margin-bottom:20px;
+border:1px solid #A9C9E2;
+background-color: #E8F5FE;
+}
+
+
+.piaoliang5{
+margin: 0px auto;
+margin-bottom:20px;
+border:1px solid #CACAFF;
+background-color: #F7F7FF;
+}
+
+.piaoliang6{
+margin: 0px auto;
+margin-bottom:20px;
+border:1px solid #D3D3D3;
+background-color: #F7F7F7;
+}
+
+.piaoliang7{
+margin: 0px auto;
+margin-bottom:20px;
+border:1px solid #9BDF70;
+background-color: #F0FBEB;
+}
+
+.piaoliang8{
+margin: 0px auto;
+margin-bottom:20px;
+border:1px solid #D3D3D3;
+background-color: #F7F7F7;
+}
+
+
+.box_select{
+    border-color:green;
+	border-width: medium;
+	text-decoration: underline;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+
+}
+
+.zadd_height{
+	line-height: 50px;
+	
+}

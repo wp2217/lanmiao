@@ -1,0 +1,27 @@
+body {
+  padding-bottom: 10px;
+  font-family: arial,verdana,sans-serif;font-size:14px;
+}
+
+a{
+
+text-align: center;
+cursor:pointer;
+	
+}
+.copyright{
+	
+	font-size: x-small;
+}
+
+.greenNumber{
+	font-family: Georgia, Times New Roman, Times, serif;
+	color: green;
+	font-size:14px;
+	font-weight: bold;
+}
+
+.text_style{
+	color: green;
+	font-weight: bold;
+}

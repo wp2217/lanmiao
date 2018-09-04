@@ -1,0 +1,45 @@
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 100px) {
+.fontSizeAuto{
+	font-size: 13px;
+}
+}
+
+@media (min-width: 768px) {
+
+.small_font{
+	font-size: 10px;
+}
+	
+.fontSizeAuto{
+	font-size: 18px;
+}
+}
+
+@media (min-width: 992px) {
+.fontSizeAuto{
+	font-size: 22px;
+}
+}

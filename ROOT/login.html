@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <title>懒喵[登录]</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="keywords" content="懒喵登录">
+    <meta http-equiv="description" content="懒喵记账登录页">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/messenger.css" rel="stylesheet">
+	<link href="css/messenger-theme-flat.css" rel="stylesheet">
+     <link href="css/login.css" rel="stylesheet"> 
+    <link href="css/common_bg.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+  </head>
+  
+  <body>
+    <div class="container">
+     
+  		<form class="form-horizontal" id="loginForm" role="form">
+  		<h2 class="masthead-brand" align="center"><a href="http://lanmiao.me">Lanmiao.me</a></h2>
+  		<h3 class="form-signin-heading" align="center"><strong>请登录</strong></h3><br>
+  		
+		  <div class="form-group">
+		    <label for="email" class="col-sm-offset-2 col-sm-2 control-label">邮箱</label>
+		    <div class="col-sm-5 col-md-4">
+		       <input id="email" name="email"  class="form-control input-lg" placeholder="邮箱" required>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="password" class="col-sm-offset-2 col-sm-2 control-label">密码</label>
+		    <div class="col-sm-5 col-md-4">
+		      <input id="password" name="password" type="password" class="form-control input-lg" placeholder="密码" required>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <div class="col-sm-offset-4 col-sm-6 col-md-5">
+		      <div class="checkbox">
+				<label class="checkbox" for="checkbox1">
+				  <input type="checkbox" value="1" name="remember" checked="checked" id="checkbox1" data-toggle="checkbox">
+				  两周内不用重复登陆
+				</label>
+		      </div>
+		    </div>
+		  </div>
+		  
+		    <div class="row">
+				<div class="col-sm-offset-6 col-sm-3 ">
+					<a href="#" id="findpwd">找回密码||</a>
+				    <a href="register1.html">注册为用户</a>
+				</div>
+			</div>  <br/>
+		  
+		  <div class="form-group">
+		    <div class="col-sm-offset-4 col-sm-5 col-md-4">
+		      <button class="btn btn-lg btn-primary btn-block" id="login" type="button">登录</button>
+		    </div>
+		  </div>
+		</form>  
+		
+		
+  <div style="text-align: center;">
+     <p>懒喵 <a href="http://lanmiao.me">lanmiao.me</a>  沪ICP备14015278号 </p>
+  </div>
+		
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="modal-title" id="myModalLabel" align="center"><span class="label label-primary" id="popupTitle">懒喵理财[找回密码]</span></h3>
+      </div>
+      <div class="modal-body" style="color: green;">
+		
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" id="modal_no" data-dismiss="modal">否</button>
+        <button type="button" class="btn btn-primary" id="modal_yes">是</button>
+      </div>
+    </div>
+  </div>
+</div>
+			
+    </div>
+  
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/auto-email.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/messenger.min.js"></script>
+    <script src="js/messenger-theme-flat.js"></script>
+    <script src="js/login.js"></script>
+    
+  </body>
+</html>

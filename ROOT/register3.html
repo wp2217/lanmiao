@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <title>懒喵[注册-薪资及五险一金]</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="keywords" content="懒喵,记账,理财">
+    <meta http-equiv="description" content="懒喵理财登录页">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ymcalendar.css" rel="stylesheet">
+    <link href="css/messenger.css" rel="stylesheet">
+    <link href="css/messenger-theme-flat.css" rel="stylesheet">
+    <link href="css/common_bg.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+  
+  <body>
+ <div class="container">
+ 
+    <form class="form-horizontal" role="form" method="post" action="Register">
+    	<h2 class="masthead-brand" align="center"><a href="http://lanmiao.me">Lanmiao.me</a></h2>
+  		<h3 class="form-signin-heading" align="center"><strong>薪资及五险一金</strong></h3>
+  		
+  		<input id="jin" name="jin" type="hidden" value="1"> <!--  1表示有五险一金 0表示无五险一金-->
+  		
+ 		<div class="panel panel-primary col-xs-offset-0 col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">薪资及五险一金</h3>
+		  </div>
+		  <div class="panel-body">
+		     <div class="form-group">
+				<label for="salary" class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-2 control-label">税前薪资</label>
+				<div class="col-xs-11 col-sm-6 col-md-4">
+				  <div class="input-group">
+					<input id="salary" name="salary" class="form-control"
+						placeholder="税前薪资" required="required">
+					<span class="input-group-addon">元</span>	
+				  </div>
+				</div>
+				<span class="glyphicon glyphicon-asterisk" style="padding-top: 10px;color: red;"></span>
+			</div>
+			
+	        <div class="form-group">
+				<label for="city" class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-2 control-label">缴纳城市</label>
+				<div class="col-xs-11 col-sm-6 col-md-4">
+				  <div class="input-group">
+				    <select id="city" name="city" class="form-control">
+				    	<option value="1">北京</option>
+				    	<option value="2">上海</option>
+				    	<option value="3">广州</option>
+				    	<option value="4">深圳</option>
+				    	<option value="5">天津</option>
+				    	<option value="6">其它城市</option>
+				    	<option value="0" selected="selected">请选择五险一金缴纳城市</option>
+				    </select>	
+				  </div>
+				</div>
+			    <div id="citydescDiv" class="col-xs-offset-0 col-xs-11  col-sm-offset-0 col-sm-2 col-md-offset-0 col-md-2" hidden="hidden">
+				    <input id="citydesc" name="citydesc" class="form-control"
+						   placeholder="城市名">
+				</div>
+				
+				<span class="glyphicon glyphicon-asterisk" style="padding-top: 10px;color: red;"></span>
+
+			</div>
+			
+  		    <div class="form-group">
+				<label for="zdate" class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-3 col-md-offset-2 col-md-2 control-label">缴纳起始年月</label>
+				<div class="col-xs-11 col-sm-6 col-md-4">
+					<input id="zdate" name="zdate" class="form-control ymcalendar"
+						placeholder="当前工作五一缴纳起始年月" required="required">
+				</div>
+				<span class="glyphicon glyphicon-asterisk" style="padding-top: 10px;color: red;"></span>
+			</div>
+			
+			
+          <div class="form-group">
+		    <div class="col-xs-offset-0 col-xs-6 col-sm-offset-2 col-sm-4 col-md-offset-2 col-md-4">
+		      <button id="auto_js" class="btn btn-info btn-block" type="button">自动计算</button>
+		    </div>
+		    
+		    <div class="col-xs-6 col-sm-4">
+				<button id="no_wuyi" class="btn btn-info btn-block" type="button">无五险一金</button>
+			</div>
+		  </div>	
+		  
+		 <hr> 
+		<div class="form-group" id="jnjs">
+			<label for="jin1" class="col-xs-12 col-sm-offset-0 col-sm-2 col-md-offset-0 col-md-2 control-label">缴纳基数</label>
+		    <div class="col-xs-6 col-sm-4 col-md-4">
+		        <div class="input-group">
+		           <div class="input-group-addon">社保</div>
+				   <input id="sbjs" name="sbjs"  class="form-control" placeholder="默认全额">
+				   
+				</div>
+			</div>
+
+			<div class="col-xs-offset-0 col-xs-6 col-md-offset-1 col-sm-4 col-md-4">
+				<div class="input-group">
+		           <div class="input-group-addon">公积金</div>
+				   <input id="gjjjs" name="gjjjs"  class="form-control" placeholder="默认全额">
+				   
+				</div>
+			</div>
+		</div>	
+					
+		<hr>			
+					
+  		<div class="form-group">
+		     <div class="col-xs-offset-0 col-xs-6 col-sm-offset-2 col-sm-4 col-md-offset-2 col-md-4  alert alert-info">
+			    <strong>单位缴纳[%/元]</strong>
+			</div>
+			
+  			<div class="col-xs-offset-0 col-xs-6 col-md-offset-1 col-sm-4 col-md-4 alert alert-info">
+  			   <strong>个人缴纳[%/元]</strong>
+  			</div>
+  		</div>
+  		
+  		<div id="wuyi"> <!-- 为了设置方便 -->
+  		
+  		<div class="form-group">
+			<label for="jin1" class="col-xs-12 col-sm-offset-0 col-sm-2 col-md-offset-0 col-md-2 control-label">住房公积金</label>
+		    <div class="col-xs-6 col-sm-4 col-md-4">
+		        <div class="input-group">
+				   <input id="gjin1" name="gjin1"  class="form-control" placeholder="公司缴纳">
+				   <div class="input-group-addon">%</div>
+				</div>
+			</div>
+
+			<div class="col-xs-offset-0 col-xs-6 col-md-offset-1 col-sm-4 col-md-4">
+				<div class="input-group">
+				  <input id="jin1" name="jin1"  type="text" class="form-control" placeholder="个人缴纳">
+				  <div class="input-group-addon">%</div>
+				</div>
+			</div>
+
+		</div>
+  		
+  		<div class="form-group">
+			<label for="jin2" class="col-xs-12 col-sm-offset-0 col-sm-2 col-md-offset-0 col-md-2 control-label">养老保险</label>
+		    <div class="col-xs-6 col-sm-4 col-md-4">
+		       <div class="input-group">
+			      <input id="gjin2" name="gjin2"  class="form-control" placeholder="公司缴纳">
+			      <div class="input-group-addon">%</div>
+			   </div>  
+			</div>
+			
+			<div class="col-xs-offset-0 col-xs-6 col-md-offset-1 col-sm-4 col-md-4">
+				<div class="input-group">
+				  <input id="jin2" name="jin2"  type="text" class="form-control" placeholder="个人缴纳">
+				  <div class="input-group-addon">%</div>
+				</div>
+			</div>
+			
+
+		</div>
+		
+  		<div class="form-group">
+			<label for="jin3" class="col-xs-12 col-sm-offset-0 col-sm-2 col-md-offset-0 col-md-2 control-label">医疗保险</label>
+		    <div class="col-xs-6 col-sm-4 col-md-4">
+		    	<div class="input-group">
+			   		<input id="gjin3" name="gjin3"  class="form-control" placeholder="公司缴纳">
+			   		<div class="input-group-addon">%</div>
+			   	</div>
+			</div>
+			<div class="col-xs-offset-0 col-xs-6 col-md-offset-1 col-sm-4 col-md-4">
+				<div class="input-group">
+				  <input id="jin3" name="jin3"  type="text" class="form-control" placeholder="个人缴纳">
+				  <div class="input-group-addon">%</div>
+				</div>
+			</div>
+
+		</div>
+		
+  		<div class="form-group">
+			<label for="jin4" class="col-xs-12 col-sm-offset-0 col-sm-2 col-md-offset-0 col-md-2 control-label">失业保险</label>
+		    <div class="col-xs-6 col-sm-4 col-md-4">
+		    	<div class="input-group">
+			   		<input id="gjin4" name="gjin4"  class="form-control" placeholder="公司缴纳">
+			   		<div class="input-group-addon">%</div>
+			   	</div>
+			</div>
+			<div class="col-xs-offset-0 col-xs-6 col-md-offset-1 col-sm-4 col-md-4">
+				<div class="input-group">
+				  <input id="jin4" name="jin4"   type="text" class="form-control" placeholder="个人缴纳">
+				  <div class="input-group-addon">%</div>
+				</div>
+			</div>			
+
+		</div>	
+  	
+  		<div class="form-group">
+			<label for="jin5" class="col-xs-12 col-sm-offset-0 col-sm-2 col-md-offset-0 col-md-2 control-label">工伤保险</label>
+		    <div class="col-xs-6 col-sm-4 col-md-4">
+		    	<div class="input-group">
+			   		<input id="gjin5" name="gjin5"  class="form-control" placeholder="公司缴纳">
+			   		<div class="input-group-addon">%</div>
+			    </div>
+			</div>
+			<div class="col-xs-offset-0 col-xs-6 col-md-offset-1 col-sm-4 col-md-4">
+				<div class="input-group">
+				  <input id="jin5" name="jin5"  type="text" class="form-control" placeholder="个人缴纳">
+				  <div class="input-group-addon">%</div>
+				</div>
+				
+			</div>
+
+		</div>  	
+		
+         <div class="form-group">
+			<label for="jin6" class="col-xs-12 col-sm-offset-0 col-sm-2 col-md-offset-0 col-md-2 control-label">生育保险</label>
+		    <div class="col-xs-6 col-sm-4 col-md-4">
+		    	<div class="input-group">
+				   <input id="gjin6" name="gjin6"  class="form-control" placeholder="公司缴纳">
+				   <div class="input-group-addon">%</div>
+				</div>
+			</div>
+			<div class="col-xs-offset-0 col-xs-6 col-md-offset-1 col-sm-4 col-md-4">
+				<div class="input-group">
+				  <input id="jin6" name="jin6"  type="text" class="form-control" placeholder="个人缴纳">
+				  <div class="input-group-addon">%</div>
+				</div>  
+			</div>
+
+		</div> 
+	 </div>	
+		
+		<div class="form-group">
+			<label for="jin1" class="col-xs-12 col-sm-offset-0 col-sm-2 col-md-offset-0 col-md-2 control-label">合计</label>
+		    <div class="col-xs-6 col-sm-4 col-md-4">
+		        <div class="input-group">
+		           <div class="input-group-addon">单位</div>
+				   <input id="sum_dw" name="sum_dw"  class="form-control" placeholder="单位共缴纳" disabled="disabled">
+				   
+				</div>
+			</div>
+
+			<div class="col-xs-offset-0 col-xs-6 col-md-offset-1 col-sm-4 col-md-4">
+				<div class="input-group">
+		           <div class="input-group-addon">个人</div>
+				   <input id="sum_gr" name="sum_gr"  class="form-control" placeholder="个人共缴纳" disabled="disabled">
+				   
+				</div>
+			</div>
+		</div>	
+		
+		<hr>
+		
+		<div class="form-group">
+		    <label for="fsalary"
+				class="col-xs-12 col-sm-offset-0 col-sm-2 col-md-offset-0 col-md-2 control-label">税后薪资
+			</label>
+			<div class="col-xs-11 col-sm-4 col-md-4">
+			   <div class="input-group">
+				<input id="finalsalary" name="finalsalary" class="form-control"
+					placeholder="税后薪资">
+				<span class="input-group-addon">元</span>	
+			   </div>
+			</div>
+			
+		
+			<label for="cmoney"
+				class="col-xs-12 col-sm-offset-0 col-sm-2 col-md-offset-0 col-md-2 control-label"><abbr
+				title="要交的税">应付税款</abbr>
+			</label>
+			<div class="col-xs-11 col-sm-3 col-md-3">
+			   <div class="input-group">
+				<input id="cmoney" name="cmoney" class="form-control"
+					placeholder="应付税款">
+				<span class="input-group-addon">元</span>	
+			   </div>
+			</div>
+			
+		</div> 		
+			
+	    <div class="form-group">
+			<div class="col-xs-offset-0 col-xs-6 col-sm-offset-2 col-sm-4  ">
+				<button id="next" class="btn btn-lg btn-primary btn-block" type="submit">下一步</button>
+			</div>
+			
+			<div class="col-xs-6 col-sm-4">
+				<button class="btn btn-lg btn-primary btn-block" type="reset">取消</button>
+			</div>
+		</div>
+			
+  	</div>
+  	</div>
+ </form>
+  </div>
+  
+    <div style="text-align: center;">
+     <p>懒喵 <a href="http://lanmiao.me">lanmiao.me</a>  沪ICP备14015278号 </p>
+    </div>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.ymcalendar.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/messenger.min.js"></script>
+    <script src="js/messenger-theme-flat.js"></script>
+    <script src="js/register3.js"></script>    
+  </body>
+</html>
